@@ -76,6 +76,7 @@ router.get('/homeworks/:id', async (req, res) => {
       })
     }
   })
+  
 //delete id parameter
 router.delete('/homeworks/:id',async(req,res)=>{
     const homework = await Homework.findById(req.params.id)
@@ -91,8 +92,8 @@ router.delete('/homeworks/:id',async(req,res)=>{
         })
     }
 })
+
 router.delete('/homeworks/deletealldata',async(req,res)=>{
-    //console.log(req.params.id)
     try{
         await Homework.remove()
         res.json({
