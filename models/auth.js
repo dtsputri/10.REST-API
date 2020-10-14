@@ -22,7 +22,6 @@ Auth.post('/login', async (req, res,next) => {
                     //urus token disini
                     let token =jwt.sign({name: username}, 'verysecretValue', {expiresIn: '1h'})
                     res.json({message :'login succesful!',token:token})
-                    
                     res.status(201).json({"status":"logged in!"})
                 }
                 else

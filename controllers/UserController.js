@@ -75,7 +75,6 @@ userRouter.post('/login', async (req, res) => {
                 resolve(user)
             })
         })
-        
         //cek user available 
        if(currentUser[0]){
             //check password
@@ -97,7 +96,6 @@ userRouter.post('/login', async (req, res) => {
     }
     catch(err){
         res.status(500).json({ error: err}) 
-        throw err
     }
 })
 
